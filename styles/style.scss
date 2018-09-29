@@ -1,0 +1,133 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 !important;
+}
+.site-header {
+  background-color: #FF5722;  
+  padding: 19px;
+  color: #fff;
+  position: relative;
+  h1{
+    font-size: 27px;
+    padding: 0;
+    line-height: 14px;
+  }
+  span {
+    font-size: 10px;
+  }
+  #nav {
+    position: absolute;
+    font-size: 16px;
+    right: 16px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    top: 23px;
+    display: none;
+  }
+}
+
+.site-content {
+  background: #8a2d10;
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  label{
+    color: #fff;
+  }
+  
+  input[type=submit] {
+    background: #FF5722;
+    border: none;
+    padding: 12px 60px;
+    float: right;
+    &:hover{
+      background:#ff57228c;
+    }
+  }
+}
+#words-list {
+  margin: 0;
+  width: 70%;
+  thead th {
+    text-align:center;
+  }
+  tbody button {
+    border: 1px solid #fff;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: #c31508;
+  }
+  tbody , tr{
+    background: rgba(244, 67, 54, 0.39);
+    border: 0;
+    text-align: center;
+  }
+}
+
+//Test view Styling
+#testView {
+  display: none;
+  label, input {
+    float: left;
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+  }
+  input {
+    color: #fff;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    box-shadow: none;
+  }
+  #nextBtn {
+    background: #FF5722;
+    border: none;
+    padding: 12px 60px;
+    float: right;
+    font-size: 17px;
+    width: 20%;
+  }
+  #progress {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+.test-mode {
+    float: right;
+    clear: both;
+    border: 1px solid;
+    padding: 10px 32px;
+    background: #F44336;
+    margin: 10px 0;
+}
+//Result view
+#resultView {
+  display: none;
+  #score {
+    text-align:center;
+    span {
+      color: #FFC107;
+    }
+  }
+  #result-list {
+    tr {color:#000;}
+    tr.answer-false {
+      background: #F44336;
+      color: #fff;
+    }
+    tr.answer-true { 
+      background: #4CAF50;
+      color: #fff;
+    }
+  }
+}

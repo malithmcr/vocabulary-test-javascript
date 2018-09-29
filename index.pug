@@ -1,0 +1,38 @@
+extends structure/_layout.pug
+
+block content
+
+  main.site-content
+   div#testView
+     form#testForm(method='POST' action='#')
+      label Chair
+      input#testSecondWord(type='text', name='italian')
+      input#nextBtn(type='submit',value='Next')
+     div#progress
+   div#resultView
+    div#score 
+     h2 Your Score is 
+      span#scorePrestnt 60%
+    div#resultTable
+      table#result-list
+        thead
+          tr
+           th English
+           th Italian
+           th Answer
+        tbody#activeResults
+      
+   div.dashboard   
+     form#submitWords(method='POST' action='#')
+      label(for='firstWord') English:
+      input#firstWord(type='text', placeholder='Chair' name='english')
+      label(for='secondWord') Italian:
+      input#secondWord(type='text', placeholder='Sedia' name='italian')
+      input#submit(type='submit',value='Add')
+     table#words-list
+      thead
+        tr
+          th English
+          th Italian
+        tbody#activeWords
+     button.test-mode#start-test(type='submit') test mode
